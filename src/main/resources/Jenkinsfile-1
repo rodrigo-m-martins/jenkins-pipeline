@@ -1,0 +1,21 @@
+pipeline{
+    agent{
+        docker {image 'node:16-alpine'}
+    }
+
+    stages{
+        stage('Build'){
+            steps{
+                echo 'Executing build...'
+                echo 'Build executed...'
+            }
+        }
+        stage('Test'){
+            steps{
+                echo 'Executing tests...'
+                echo 'Tests executed...'
+            }
+        }
+        stage('Deploy')
+    }
+}
